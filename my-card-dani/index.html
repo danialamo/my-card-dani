@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Put your description here.">
+  <base href="/">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: black; 
+    }
+    button:hover{
+      background-color: black;
+      color: white;  
+    }
+  </style>
+  <title>my-card-dani</title>
+</head>
+
+<body>
+  <div class="buttons"> 
+    <button class="duplicate">Duplicate card</button>
+    <button class="changeTitle">Change Name</button>
+    <button id="deletelastcard">Delete</button>
+    <button data-toggle-btn>Toggle stats</button></button>
+  </div>
+
+  <div id="app"> 
+  <my-card-dani>
+    <p> Haters gonna hate.</p>
+  </my-card-dani>
+</div>
+
+  <script type="module" src="./src/my-card-dani.js"></script>
+  <script>
+//toggle stats 
+document.querySelector("button[data-toggle-btn]").addEventListener('click', (e) => {
+  const details = document.querySelector('my-card-dani').shadowRoot.querySelector('details') 
+   console.log(details);
+  if(details.getAttribute('open')){
+    details.removeAttribute('open');
+  }
+  else{
+    details.setAttribute('open', 'open')
+  }
+});
+
+//duplicate card 
+document.querySelector('.duplicate').addEventListener('click', function(e) {
+  const cloneItem = document.querySelector('my-card-dani').cloneNode(); 
+  document.querySelector('#app').appendChild(cloneItem); 
+});
+
+//Change heading
+document.querySelector('.changeTitle').addEventListener('click', function(e) {
+  let name = prompt("Change Title..."); 
+  if(name){
+    document.querySelector('my-card-dani').name = name; 
+  }
+});  
+
+//deleteLastCard 
+document.querySelector('#deletelastcard').addEventListener('click', (e) => {
+  let confirmDecision = confirm("Are you sure you want to delete last card?");
+  if(confirmDecision){
+    if(document.querySelector('#app :last-child') !== document.querySelector('my-card-dani')){
+      document.querySelector('#app :last-child').remove();
+    }
+    else {
+      alert("You cannot delete champions!")
+    }
+  }
+});
+  </script>
+
+  
+</body>
+
+</html>
