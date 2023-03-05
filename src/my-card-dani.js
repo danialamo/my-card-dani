@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-
+import "@lrnwebcomponents/meme-maker/meme-maker.js";
 
 const tblcard= new URL('../assets/tblcard.jpeg', import.meta.url).href;
 
@@ -54,6 +54,7 @@ export class MyCardDani extends LitElement {
   constructor() {
     super();
     this.name = "Champa Bay Lightning";
+    this.imageUrl = '../assets/tblcard.jpeg';
     this.textbox1 = "The actual best team in the NHL.";
     this.menuLabel = "More Facts";
     this.textbox2 = "Cardz by Dani";
@@ -63,7 +64,10 @@ export class MyCardDani extends LitElement {
     return html`
 <div class= "wrapper"> 
   <h2>${this.name}</h2> 
-   <img class="image" src="${tblcard}"/>
+  
+  <meme-maker image-url=${this.imageUrl}>
+</meme-maker>
+
   <div id= "textbox1">
     <p>${this.textbox1}</p>
   </div>
