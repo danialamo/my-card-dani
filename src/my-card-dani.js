@@ -64,10 +64,8 @@ export class MyCardDani extends LitElement {
     return html`
 <div class= "wrapper"> 
   <h2>${this.name}</h2> 
-  
   <meme-maker image-url=${this.imageUrl}>
 </meme-maker>
-
   <div id= "textbox1">
     <p>${this.textbox1}</p>
   </div>
