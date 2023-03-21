@@ -24,21 +24,31 @@
 </head>
 
 <body>
+
+  <team-roster></team-roster>
+
+
   <div class="buttons"> 
     <button class="duplicate">Duplicate card</button>
     <button class="changeTitle">Change Name</button>
     <button id="deletelastcard">Delete</button>
     <button data-toggle-btn>Toggle stats</button></button>
   </div>
-
   <div id="app"> 
   <my-card-dani>
     <p> Haters gonna hate.</p>
   </my-card-dani>
 </div>
 
-  <script type="module" src="./src/my-card-dani.js"></script>
-  <script>
+<script type="module">
+import "./src/my-card-dani.js";
+import "./src/team-roster.js"; 
+  </script>
+
+  <script> 
+
+
+
 //toggle stats 
 document.querySelector("button[data-toggle-btn]").addEventListener('click', (e) => {
   const details = document.querySelector('my-card-dani').shadowRoot.querySelector('details') 

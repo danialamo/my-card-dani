@@ -13,19 +13,76 @@
           "members": [
             {
               "kind": "field",
-              "name": "header",
+              "name": "name",
               "type": {
                 "text": "string"
               },
-              "default": "'My app'",
+              "default": "\"Champa Bay Lightning\"",
               "privacy": "public",
-              "attribute": "header"
+              "attribute": "name",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "imageUrl",
+              "type": {
+                "text": "string"
+              },
+              "default": "'../assets/tblcard.jpeg'",
+              "privacy": "public",
+              "attribute": "imageUrl"
+            },
+            {
+              "kind": "field",
+              "name": "textbox1",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"The actual best team in the NHL.\"",
+              "privacy": "public",
+              "attribute": "textbox1"
+            },
+            {
+              "kind": "field",
+              "name": "menuLabel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"More Facts\"",
+              "privacy": "public",
+              "attribute": "menuLabel"
+            },
+            {
+              "kind": "field",
+              "name": "textbox2",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"Cardz by Dani\"",
+              "privacy": "public",
+              "attribute": "textbox2"
             }
           ],
           "attributes": [
             {
-              "name": "header",
-              "fieldName": "header"
+              "name": "name",
+              "fieldName": "name"
+            },
+            {
+              "name": "imageUrl",
+              "fieldName": "imageUrl"
+            },
+            {
+              "name": "textbox1",
+              "fieldName": "textbox1"
+            },
+            {
+              "name": "menuLabel",
+              "fieldName": "menuLabel"
+            },
+            {
+              "name": "textbox2",
+              "fieldName": "textbox2"
             }
           ],
           "superclass": {
@@ -38,11 +95,89 @@
       ],
       "exports": [
         {
+          "kind": "js",
+          "name": "MyCardDani",
+          "declaration": {
+            "name": "MyCardDani",
+            "module": "src/my-card-dani.js"
+          }
+        },
+        {
           "kind": "custom-element-definition",
           "name": "my-card-dani",
           "declaration": {
             "name": "MyCardDani",
             "module": "src/my-card-dani.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/team-roster.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TeamRoster",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "players",
+              "type": {
+                "text": "array"
+              },
+              "default": "[{\n            \"name\" : \"Steven Stamkos\",\n            \"imageUrl\" : \"https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8474564@2x.jpg\",\n            \"textbox1\" : \"\",\n            \"menuLabel\" : \"More Facts\",\n            \"textbox2\" : \"Cardz by Dani\"\n        },\n        {\n            \"name\" : \"Brayden Point\",\n            \"imageUrl\" : \"https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8478010@2x.jpg\",\n            \"textbox1\" : \"\",\n            \"menuLabel\" : \"More Facts\",\n            \"textbox2\" : \"Cardz by Dani\"\n        },\n        {\n            \"name\" : \"Nikita Kucherov\",\n            \"imageUrl\" : \"https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8476453@2x.jpg\",\n            \"textbox1\" : \"\",\n            \"menuLabel\" : \"More Facts\",\n            \"textbox2\" : \"Cardz by Dani\"\n        }]",
+              "privacy": "public",
+              "attribute": "players"
+            },
+            {
+              "kind": "field",
+              "name": "teamName",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"Champa Bay Lightning\"",
+              "privacy": "public",
+              "attribute": "teamName"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "players",
+              "fieldName": "players"
+            },
+            {
+              "name": "teamName",
+              "fieldName": "teamName"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TeamRoster",
+          "declaration": {
+            "name": "TeamRoster",
+            "module": "src/team-roster.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "TeamRoster",
+            "module": "src/team-roster.js"
           }
         }
       ]
