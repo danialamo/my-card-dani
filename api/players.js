@@ -12,7 +12,7 @@ export default async function handler(request, res) {
         {
             "name" : "Brayden Point",
             "imageUrl" : "https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8478010@2x.jpg",
-            "textbox1" : "My Husband",
+            "textbox1" : "Center",
             "menuLabel" : "More Facts",
             "textbox2" : "Cardz by Dani"
         },
@@ -20,7 +20,7 @@ export default async function handler(request, res) {
             "name" : "Nikita Kucherov",
             "imageUrl" : "https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8476453@2x.jpg",
             "textbox1" : "Russian Savage",
-            "menuLabel" : "More Facts",
+            "menuLabel" : "Rigt Wing",
             "textbox2" : "Cardz by Dani"
         }
     ];
