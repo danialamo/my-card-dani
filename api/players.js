@@ -19,8 +19,8 @@ export default async function handler(request, res) {
         {
             "name" : "Nikita Kucherov",
             "imageUrl" : "https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8476453@2x.jpg",
-            "textbox1" : "Russian Savage",
-            "menuLabel" : "Rigt Wing",
+            "textbox1" : "Right Wing",
+            "menuLabel" : "More Facts",
             "textbox2" : "Cardz by Dani"
         }
     ];
