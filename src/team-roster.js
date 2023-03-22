@@ -21,7 +21,18 @@ export class TeamRoster extends LitElement{
     }
 
     updateRoster(){
-        fetch(new URL('../assets/players.json', import.meta.url).href);
+        const address = new URL('../api/players', import.meta.url).href;
+        const data =  fetch(address).then((response) => {
+            if(response.ok){
+                return response.json()
+            }
+            return [];
+        })
+        .then((data) => {
+            this.players = data;
+        }); 
+        console.log(data); 
+        
     }
 
 
