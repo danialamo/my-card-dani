@@ -4,6 +4,34 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "api/players.js",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "handler",
+          "parameters": [
+            {
+              "name": "request"
+            },
+            {
+              "name": "res"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "handler",
+            "module": "api/players.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/my-card-dani.js",
       "declarations": [
         {
@@ -127,12 +155,16 @@
               "static": true
             },
             {
+              "kind": "method",
+              "name": "updateRoster"
+            },
+            {
               "kind": "field",
               "name": "players",
               "type": {
                 "text": "array"
               },
-              "default": "[{\n            \"name\" : \"Steven Stamkos\",\n            \"imageUrl\" : \"https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8474564@2x.jpg\",\n            \"textbox1\" : \"\",\n            \"menuLabel\" : \"More Facts\",\n            \"textbox2\" : \"Cardz by Dani\"\n        },\n        {\n            \"name\" : \"Brayden Point\",\n            \"imageUrl\" : \"https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8478010@2x.jpg\",\n            \"textbox1\" : \"\",\n            \"menuLabel\" : \"More Facts\",\n            \"textbox2\" : \"Cardz by Dani\"\n        },\n        {\n            \"name\" : \"Nikita Kucherov\",\n            \"imageUrl\" : \"https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8476453@2x.jpg\",\n            \"textbox1\" : \"\",\n            \"menuLabel\" : \"More Facts\",\n            \"textbox2\" : \"Cardz by Dani\"\n        }]",
+              "default": "[]",
               "privacy": "public",
               "attribute": "players"
             },

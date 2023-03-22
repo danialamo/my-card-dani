@@ -1,0 +1,21 @@
+[{
+    "name" : "Steven Stamkos",
+    "imageUrl" : "https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8474564@2x.jpg",
+    "textbox1" : "Captian",
+    "menuLabel" : "More Facts",
+    "textbox2" : "Cardz by Dani"
+},
+{
+    "name" : "Brayden Point",
+    "imageUrl" : "https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8478010@2x.jpg",
+    "textbox1" : "My Husband",
+    "menuLabel" : "More Facts",
+    "textbox2" : "Cardz by Dani"
+},
+{
+    "name" : "Nikita Kucherov",
+    "imageUrl" : "https://cms.nhl.bamgrid.com/images/headshots/current/168x168/8476453@2x.jpg",
+    "textbox1" : "Russian Savage",
+    "menuLabel" : "More Facts",
+    "textbox2" : "Cardz by Dani"
+}]
