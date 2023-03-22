@@ -32,33 +32,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "stories/my-card-dani.stories.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "App"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "stories/my-card-dani.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "App",
-          "declaration": {
-            "name": "App",
-            "module": "stories/my-card-dani.stories.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/my-card-dani.js",
       "declarations": [
         {
@@ -237,6 +210,33 @@
           "declaration": {
             "name": "TeamRoster",
             "module": "src/team-roster.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "stories/my-card-dani.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "App"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "stories/my-card-dani.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "App",
+          "declaration": {
+            "name": "App",
+            "module": "stories/my-card-dani.stories.js"
           }
         }
       ]
